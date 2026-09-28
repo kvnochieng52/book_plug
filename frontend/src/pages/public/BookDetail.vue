@@ -144,7 +144,7 @@ function buyNow() {
                 <div class="flex-1">
                   <div class="flex items-center justify-between">
                     <div class="font-semibold">Digital (PDF)</div>
-                    <div class="font-bold text-brand-700">${{ book.digitalPrice.toFixed(2) }}</div>
+                    <div class="font-bold text-brand-700">KES {{ book.digitalPrice.toFixed(2) }}</div>
                   </div>
                   <p class="text-xs text-ink-500 mt-1">Read online or download. DRM-free.</p>
                 </div>
@@ -164,7 +164,7 @@ function buyNow() {
                 <div class="flex-1">
                   <div class="flex items-center justify-between">
                     <div class="font-semibold">Physical (paperback)</div>
-                    <div class="font-bold text-accent-700">${{ book.physicalPrice.toFixed(2) }}</div>
+                    <div class="font-bold text-accent-700">KES {{ book.physicalPrice.toFixed(2) }}</div>
                   </div>
                   <p class="text-xs text-ink-500 mt-1">Ships in 3–5 days · Tracked delivery</p>
                 </div>
@@ -177,12 +177,12 @@ function buyNow() {
             <input v-model="bundle" type="checkbox" class="mt-1 rounded text-brand-600 focus:ring-brand-400" />
             <div>
               <div class="text-sm font-semibold text-brand-900">Add digital copy for 50% off</div>
-              <div class="text-xs text-brand-800/80">Read now while your paperback ships. +${{ (book.digitalPrice * 0.5).toFixed(2) }}</div>
+              <div class="text-xs text-brand-800/80">Read now while your paperback ships. +KES {{ (book.digitalPrice * 0.5).toFixed(2) }}</div>
             </div>
           </label>
 
           <div class="mt-6 flex flex-wrap items-center gap-3">
-            <div class="text-3xl font-extrabold text-ink-900">${{ price.toFixed(2) }}</div>
+            <div class="text-3xl font-extrabold text-ink-900">KES {{ price.toFixed(2) }}</div>
             <button class="btn-primary px-6 py-3" @click="addToCart">
               <CheckCircleIcon v-if="added" class="h-5 w-5" /> {{ added ? 'Added to cart' : 'Add to cart' }}
             </button>

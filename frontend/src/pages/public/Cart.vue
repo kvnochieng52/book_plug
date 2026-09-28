@@ -39,7 +39,7 @@ const cart = useCartStore()
                 <span class="w-8 text-center text-sm">{{ item.qty }}</span>
                 <button class="px-3 py-1 hover:bg-ink-50" @click="cart.setQty(item.key, item.qty + 1)">+</button>
               </div>
-              <div class="ml-auto font-bold">${{ (item.price * item.qty).toFixed(2) }}</div>
+              <div class="ml-auto font-bold">KES {{ (item.price * item.qty).toFixed(2) }}</div>
             </div>
           </div>
         </div>
@@ -48,10 +48,10 @@ const cart = useCartStore()
       <aside class="card p-6 h-max sticky top-24">
         <h3 class="font-semibold text-lg">Order summary</h3>
         <div class="mt-4 space-y-2 text-sm">
-          <div class="flex justify-between"><span class="text-ink-500">Subtotal</span><span>${{ cart.subtotal.toFixed(2) }}</span></div>
-          <div class="flex justify-between"><span class="text-ink-500">Shipping</span><span>${{ cart.shipping.toFixed(2) }}</span></div>
+          <div class="flex justify-between"><span class="text-ink-500">Subtotal</span><span>KES {{ cart.subtotal.toFixed(2) }}</span></div>
+          <div class="flex justify-between"><span class="text-ink-500">Shipping</span><span>KES {{ cart.shipping.toFixed(2) }}</span></div>
           <div class="flex justify-between text-base pt-3 border-t border-ink-100 mt-3 font-bold">
-            <span>Total</span><span>${{ cart.total.toFixed(2) }}</span>
+            <span>Total</span><span>KES {{ cart.total.toFixed(2) }}</span>
           </div>
         </div>
         <router-link to="/checkout" class="btn-primary w-full mt-6 py-3">Checkout</router-link>

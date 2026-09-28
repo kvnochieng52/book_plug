@@ -46,8 +46,8 @@ defineProps({
       </h3>
       <p class="text-sm text-ink-500">{{ book.author }}</p>
       <div class="mt-1 flex items-baseline gap-2">
-        <span class="text-brand-700 font-bold">${{ book.digitalPrice.toFixed(2) }}</span>
-        <span v-if="book.hasPhysical" class="text-xs text-ink-500 line-through">${{ book.physicalPrice.toFixed(2) }}</span>
+        <span class="text-brand-700 font-bold">KES {{ book.digitalPrice.toFixed(2) }}</span>
+        <span v-if="book.hasPhysical" class="text-xs text-ink-500 line-through">KES {{ book.physicalPrice.toFixed(2) }}</span>
       </div>
     </div>
   </router-link>

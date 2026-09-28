@@ -6,7 +6,7 @@ const form = ref({
   storeName: 'BookPlug',
   tagline: 'Read, download, own great books.',
   supportEmail: 'hello@bookplug.io',
-  currency: 'USD',
+  currency: 'KES',
   taxRate: 16,
   shippingFlat: 4.99,
   freeShipOver: 40,
@@ -51,7 +51,7 @@ const form = ref({
       <div>
         <label class="label">Currency</label>
         <select v-model="form.currency" class="input">
-          <option>USD</option><option>KES</option><option>EUR</option><option>GBP</option>
+          <option>KES</option><option>USD</option><option>EUR</option><option>GBP</option>
         </select>
       </div>
     </div>
